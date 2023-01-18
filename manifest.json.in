@@ -1,0 +1,15 @@
+{
+    "name": "tcpreview.tcpreview",
+    "description": "A short description of your app",
+    "architecture": "@CLICK_ARCH@",
+    "title": "TrialCameraPreview",
+    "hooks": {
+        "tcpreview": {
+            "apparmor": "tcpreview.apparmor",
+            "desktop":  "tcpreview.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "tPreview <digitaleservice@gmail.com>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}
