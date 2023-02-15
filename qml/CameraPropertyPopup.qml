@@ -50,8 +50,8 @@
 
 import QtQuick 2.0
 
-Popup {
-    id: propertyPopup
+ Popup{
+    id: property
 
     property alias model : view.model
     property variant currentValue
@@ -80,15 +80,15 @@ Popup {
         id: view
         anchors.fill: parent
         anchors.margins: 5
-        cellWidth: propertyPopup.itemWidth
-        cellHeight: propertyPopup.itemHeight
+        cellWidth: property.itemWidth
+        cellHeight: property.itemHeight
         snapMode: ListView.SnapOneItem
         highlightFollowsCurrentItem: true
         highlight: Rectangle { color: "gray"; radius: 5 }
-        currentIndex: indexForValue(propertyPopup.currentValue)
+        currentIndex: indexForValue(property.currentValue)
 
         delegate: Item {
-            width: propertyPopup.itemWidth
+            width: property.itemWidth
             height: 70
 
             Image {
@@ -98,8 +98,8 @@ Popup {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    propertyPopup.currentValue = value
-                    propertyPopup.selected(value)
+                    property.currentValue = value
+                    property.selected(value)
                 }
             }
         }
