@@ -105,7 +105,7 @@ Rectangle {
         }
 
         videoRecorder {
-             resolution: "640x480"
+             resolution: "1920x1080"
              frameRate: 30
         }
     }
@@ -139,7 +139,7 @@ Rectangle {
         height: parent.height
 
         source: camera
-        autoOrientation: true
+        autoOrientation: false
     }
 
     PhotoCaptureControls {

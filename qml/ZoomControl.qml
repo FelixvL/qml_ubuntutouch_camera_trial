@@ -106,7 +106,7 @@ Item {
             height: parent.height - y
             smooth: true
             radius: 8
-            color: "white"
+            color: "yellow"
             opacity: 0.5
         }
 
@@ -116,7 +116,8 @@ Item {
                 left: bar.right; leftMargin: 16
             }
             y: Math.min(parent.height - height, Math.max(0, groove.y - height / 2))
-            text: "x" + Math.round(zoomControl.currentZoom * 100) / 100
+//            text: "x" + Math.round(zoomControl.currentZoom * 100) / 100
+            text: "x--" + zoomControl.currentZoom
             font.bold: true
             color: "white"
             style: Text.Raised; styleColor: "black"
